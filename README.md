@@ -14,15 +14,15 @@
 ### 简单调用
 依次启动eureka、producer、consumer三个项目
 
-先输入：http://localhost:9000/hello?name=neo 检查spring-cloud-producer服务是否正常
+先输入：http://localhost:9000/hello?name=sunming 检查spring-cloud-producer服务是否正常
 
-返回：hello neo，this is first messge
+返回：hello sunming ，this is first messge
 
 说明spring-cloud-producer正常启动，提供的服务也正常。
 
-浏览器中输入：http://localhost:9001/hello/neo
+浏览器中输入：http://localhost:9001/hello/sunming 
 
-返回：hello neo，this is first messge
+返回：hello sunming ，this is first messge
 
 说明客户端已经成功的通过feign调用了远程服务hello，并且将结果返回到了浏览器。
 
@@ -33,14 +33,14 @@
 ## 测试
    依次启动eureka、producer、consumer三个项目。
    
-   浏览器中输入：http://localhost:9001/hello/neo
+   浏览器中输入：http://localhost:9001/hello/sunming
    
-   返回：hello neo，this is first messge
+   返回：hello sunming，this is first messge
    
    说明加入熔断相关信息后，不影响正常的访问。接下来我们手动停止spring-cloud-producer项目再次测试：
    
-   浏览器中输入：http://localhost:9001/hello/neo
+   浏览器中输入：http://localhost:9001/hello/sunming
    
-   返回：hello neo, this messge send failed
+   返回：hello sunming, this messge send failed
    
    根据返回结果说明熔断成功。
