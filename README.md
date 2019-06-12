@@ -44,3 +44,9 @@
    返回：hello sunming, this messge send failed
    
    根据返回结果说明熔断成功。
+
+## 配置中心
+### 测试
+http://localhost:8001/config/dev
+
+http://localhost:8001/config-dev.properties
