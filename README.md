@@ -57,3 +57,10 @@ http://localhost:8001/config-dev.properties
 
 启动客户端后访问
 http://localhost:8002/hello
+
+### 配置中心服务化和高可用
+客户端都是直接调用配置中心的server端来获取配置文件信息。
+这样就存在了一个问题，客户端和服务端的耦合性太高，如果server端要做集群，客户端只能通过原始的方式来路由，server端改变IP地址的时候，客户端也需要修改配置，不符合springcloud服务治理的理念。springcloud提供了这样的解决方案，我们只需要将server端当做一个服务注册到eureka中，
+client端去eureka中去获取配置中心server端的服务既可。
+
+在producer和consumer中加入了配置中心
