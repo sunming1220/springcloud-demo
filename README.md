@@ -47,6 +47,13 @@
 
 ## 配置中心
 ### 测试
+
+config-server:服务端
+config-client:客户端
+启动服务端后访问
 http://localhost:8001/config/dev
 
 http://localhost:8001/config-dev.properties
+
+启动客户端后访问
+http://localhost:8002/hello
