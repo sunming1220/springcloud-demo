@@ -12,6 +12,7 @@
         <module name="eureka" />
         <module name="producer" />
         <module name="springcloud-demo" />
+        <module name="zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,8 +20,10 @@
       <module name="config-server" target="1.8" />
       <module name="consumer" target="1.8" />
       <module name="eureka" target="1.8" />
+      <module name="gateway" target="1.8" />
       <module name="producer" target="1.8" />
       <module name="springcloud-demo" target="1.8" />
+      <module name="zuul" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
